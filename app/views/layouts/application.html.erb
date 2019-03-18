@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <div id="header">
+    <h1>ABET</h1>
+    <h2>The Accreditation Board for Engineering and Technology</h2>
+  </div>
+  <div id="pages">
+  <%= link_to "ADMIN", admins_path %>
+  <%= link_to "COURSES",courses_path %>
+  </div>
     <%= yield %>
+
   </body>
 </html>
