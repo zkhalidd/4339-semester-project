@@ -15,10 +15,14 @@
     <h2>The Accreditation Board for Engineering and Technology</h2>
   </div>
   <div id="pages">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
   <%= link_to "ADMIN", admins_path %>
   <%= link_to "COURSES",courses_path %>
-  </div>
-    <%= yield %>
 
+
+    <%= yield %>
+  </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Faculty</h1>
+<h1>Admin</h1>
 
 <div class="media">
   <div class="media-body">
@@ -27,8 +27,10 @@
             <td><%= admin.email %></td>
             <td><%= admin.phonenumber %></td>
             <td><%= link_to 'Show', admin %></td>
+            <% if current_user && current_user.admin %>
             <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
             <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
           </tr>
         <% end %>
       </tbody>

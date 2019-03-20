@@ -25,7 +25,7 @@ class AdminsController < ApplicationController
   # POST /admins.json
   def create
     @admin = Admin.new(admin_params)
-
+    @admin.user = current_user
     respond_to do |format|
       if @admin.save
         format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
